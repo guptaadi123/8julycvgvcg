@@ -7,6 +7,7 @@ import 'user.dart';
 import 'home.dart';
 import 'register.dart';
 import 'dialog.dart';
+import 'forgotpass.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -26,7 +27,9 @@ class MyApp extends StatelessWidget {
           Signin.id:(context) =>Signin(),
           Home.id:(context) =>Home(),
           Register.id:(context) => Register(),
-          dialog.id:(context) => dialog()
+          dialog.id:(context) => dialog(),
+          Forgot.id:(context)=> Forgot(),
+        //  ProfileView.id:(context) => ProfileView()
         },
 
       ),

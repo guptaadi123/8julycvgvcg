@@ -2,6 +2,7 @@ import 'package:finalproject/services/auth.dart';
 import 'package:flutter/material.dart';
 import 'home.dart';
 import 'register.dart';
+import 'forgotpass.dart';
 
 
 class Signin extends StatefulWidget {
@@ -87,22 +88,34 @@ class _SigninState extends State<Signin> {
 
                     }else{
                       print('registeration succesfull');
+                      //print("$result");
                       Navigator.pushNamed(context, Home.id);
                     }
 
                   }
                   //print(email);
-                 // print(password);
+                  // print(password);
 
                 },
               ),
-          SizedBox(height: 12.0,),
+              SizedBox(height: 12.0,),
+              FlatButton(
+                color: Colors.pink,
+                child: Text(
+                    "Forgot Password", style: TextStyle(
+                  color: Colors.white,
+                ),),
+                onPressed: (){
+                  Navigator.pushNamed(context, Forgot.id);
+
+                },
+              ),
               SizedBox(height: 12.0,),
               Text(error,
                 style: TextStyle(
                     color: Colors.red,
                     fontSize: 14.0
-                ),)
+                ),),
 
             ],
           ),
